@@ -9,3 +9,5 @@ Electronic Phone Book
 5. Quit
 
 """
+
+print(menu)
