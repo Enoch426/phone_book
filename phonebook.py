@@ -11,3 +11,5 @@ Electronic Phone Book
 """
 
 print(menu)
+
+selected_option = input("What do you want to do (1-5)")
