@@ -29,17 +29,17 @@ while selected_option != "5":
 
 
     if selected_option == "2": 
-        name = input("What is the contact's name?")
+        name = input("What is the contact's name?  ")
         phone_number = input("what is their phone number")
         phonebook[name] = phone_number
         print("contact saved successfully!")
         
     if selected_option == "1":
-        name = input("who are you looking for?") #changed the wording of the string 
+        name = input("who are you looking for?  ") #changed the wording of the string 
         phonebook.get(name) 
         print(phonebook.get(name))
         
-    elif  phonebook == (None):      #created an "elif" function fot 'none' to be equivalant to a string
+    elif  phonebook == (None):      #created an "elif" function for 'none' to be equivalant to a string
         print("Data not Found")
         
     
@@ -48,11 +48,13 @@ while selected_option != "5":
     
     
     if selected_option == "3":
-        name = input("What contact's number are you trying to delete?")
-        phonebook.pop(phonebook[name])      # tacking out phone_number that was next to "name"
+        name = input("What contact's number are you trying to delete?  ")
+        phonebook.pop(name)      # tacking out phone_number that was next to "name"
         print(phonebook)
+        print("contact deleted succecfully")
     
     if selected_option == "4":
+        print("list of contacts!")
         print(phonebook)
 
         
