@@ -1,4 +1,7 @@
+from ast import Delete
 from asyncio import selector_events
+from os import remove
+from tkinter import N
 
 
 phonebook = {}
@@ -31,12 +34,30 @@ while selected_option != "5":
         phonebook[name] = phone_number
         print("contact saved successfully!")
         
-    elif selected_option == "1":
-        name = ("what contact's number would you like?")
-        print(phonebook[name])
-        # print(menu)
+    if selected_option == "1":
+        name = input("who are you looking for?") #changed the wording of the string 
+        phonebook.get(name) 
+        print(phonebook.get(name))
+        
+    elif  phonebook == (None):      #created an "elif" function fot 'none' to be equivalant to a string
+        print("Data not Found")
+        
     
     if selected_option == "5":
         quit(selected_option)
+    
+    
+    if selected_option == "3":
+        name = input("What contact's number are you trying to delete?")
+        phonebook.pop(phonebook[name])      # tacking out phone_number that was next to "name"
+        print(phonebook)
+    
+    if selected_option == "4":
+        print(phonebook)
+
+        
+
+        
+
    
   
